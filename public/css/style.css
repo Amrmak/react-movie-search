@@ -58,11 +58,56 @@ body {
   background-color: #166dc5;
 }
 
+.navbar {
+  overflow: hidden;
+  background-color: #222;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.navbar a {
+  position: absolute;
+  left: 0;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 5px;
+  color: #fff;
+  font-weight: bold;
+}
+.navbar a:hover {
+  color: #0066cc;
+}
+.navbar form {
+  position: relative;
+  width: 80%;
+  max-width: 500px;
+}
+.navbar input {
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 5px;
+  padding-right: 30px;
+  width: 100%;
+}
+.navbar button {
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5px;
+}
+
 .movie-cards-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-content: flex-start;
+  margin-top: 10px;
 }
 .movie-card {
   width: 45%;
@@ -130,13 +175,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: calc(100vh - 50px);
   background-size: cover;
   background-position: center;
 }
 .movie-card-container-overlay {
   position: fixed;
-  top: 0;
+  top: 50px;
   left: 0;
   height: 100%;
   width: 100%;

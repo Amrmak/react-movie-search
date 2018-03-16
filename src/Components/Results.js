@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 
+import Navbar from "./Navbar"
 import MovieCard from "./MovieCard"
 
 export default class Results extends Component {
@@ -25,24 +26,27 @@ export default class Results extends Component {
   }
   render() {
     return (
-      <div className="movie-cards-container">
-        {this.state.results
-          ? this.state.results.map(movie => {
-              if (movie.adult === false && movie.poster_path) {
-                return (
-                  <MovieCard
-                    key={movie.id}
-                    id={movie.id}
-                    posterSize={200}
-                    posterPath={movie.poster_path}
-                    title={movie.title}
-                    releaseDate={movie.release_date}
-                    overview={movie.overview}
-                  />
-                )
-              } else return null
-            })
-          : "Loading..."}
+      <div>
+        <Navbar />
+        <div className="movie-cards-container">
+          {this.state.results
+            ? this.state.results.map(movie => {
+                if (movie.adult === false && movie.poster_path) {
+                  return (
+                    <MovieCard
+                      key={movie.id}
+                      id={movie.id}
+                      posterSize={200}
+                      posterPath={movie.poster_path}
+                      title={movie.title}
+                      releaseDate={movie.release_date}
+                      overview={movie.overview}
+                    />
+                  )
+                } else return null
+              })
+            : "Loading..."}
+        </div>
       </div>
     )
   }

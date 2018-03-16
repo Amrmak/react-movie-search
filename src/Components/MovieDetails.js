@@ -1,5 +1,7 @@
 import React, { Component } from "react"
 
+import Navbar from "./Navbar"
+
 export default class MovieDetails extends Component {
   constructor(props) {
     super(props)
@@ -28,6 +30,7 @@ export default class MovieDetails extends Component {
   render() {
     return (
       <div>
+        <Navbar />
         {this.state.movie ? (
           <div
             className="movie-card-container"
@@ -56,7 +59,7 @@ export default class MovieDetails extends Component {
                   <p>Rating: {this.state.movie.vote_average}/10</p>
                   <p>Runtime: {this.state.movie.runtime} Minutes</p>
                   <p>
-                    Budget: {this.addCommasToNumber(this.state.movie.budget)}
+                    Budget: ${this.addCommasToNumber(this.state.movie.budget)}
                   </p>
                   <p>
                     Box Office: ${this.addCommasToNumber(
