@@ -15,9 +15,7 @@ export default class Navbar extends Component {
   render() {
     return (
       <nav className="navbar">
-        <a href="#!" onClick={() => (window.location.href = "/")}>
-          HOME
-        </a>
+        <a onClick={() => (window.location.href = "/")}>HOME</a>
         <form>
           <input
             type="text"
