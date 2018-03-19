@@ -1,7 +1,7 @@
 {
   "name": "react-movie-search",
   "version": "0.1.0",
-  "homepage": "http://amrmak.github.io/react-movie-search/demo",
+  "homepage": "http://amrmak.github.io/react-movie-search/",
   "private": true,
   "dependencies": {
     "react": "^16.2.0",
