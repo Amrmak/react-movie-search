@@ -9,7 +9,8 @@ export default class Navbar extends Component {
   }
   handleSearch = e => {
     e.preventDefault()
-    window.location.href = `/results/${this.state.query}`
+    window.location.href = `#/results/${this.state.query}`
+    window.location.reload()
   }
 
   render() {
