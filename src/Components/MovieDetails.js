@@ -42,12 +42,6 @@ export default class MovieDetails extends Component {
           >
             <div className="movie-card-container-overlay" />
             <div className="movie-card-big">
-              <img
-                src={`https://image.tmdb.org/t/p/w300/${
-                  this.state.movie.poster_path
-                }`}
-                alt={this.state.movie.title}
-              />
               <div className="container">
                 <h2 style={{ marginBottom: 0 }}>{this.state.movie.title}</h2>
                 <p style={{ margin: 0 }}>
