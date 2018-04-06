@@ -25,12 +25,14 @@ export default class Results extends Component {
       })
   }
   render() {
+    console.log(this.state.results)
     return (
       <div>
         <Navbar />
         <div className="movie-cards-container">
-          {this.state.results
-            ? this.state.results.map(movie => {
+          {this.state.results ? (
+            this.state.results.length !== 0 ? (
+              this.state.results.map(movie => {
                 if (movie.adult === false && movie.poster_path) {
                   return (
                     <MovieCard
@@ -45,7 +47,12 @@ export default class Results extends Component {
                   )
                 } else return null
               })
-            : "Loading..."}
+            ) : (
+              <h3>No Results Found</h3>
+            )
+          ) : (
+            <h3>Loading...</h3>
+          )}
         </div>
       </div>
     )
