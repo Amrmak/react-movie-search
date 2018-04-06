@@ -216,7 +216,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 50px);
+  min-height: calc(100vh - 50px);
+  height: 100%;
   background-size: cover;
   background-position: center;
 }
@@ -231,10 +232,10 @@ body {
 .movie-card-big {
   display: flex;
   background-color: rgba(0, 0, 0, 0.85);
-  border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   border-radius: 5px;
+  margin: 10px;
   width: 80%;
   z-index: 1;
 }
